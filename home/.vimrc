@@ -83,7 +83,7 @@ Bundle 'grep.vim'
 Bundle 'ctrlp.vim'
 
 let g:ycm_global_ycm_extra_conf = '/home/nyankosama/.ycm_extra_conf.py'
-let g:ycm_key_invoke_completion = '<C-w>'
+let g:ycm_key_invoke_completion = '<C-k>'
 
 
 set laststatus=2
