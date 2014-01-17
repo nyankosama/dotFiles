@@ -40,6 +40,11 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 #历史纪录文件
 export HISTFILE=~/.zhistory
+
+#PIP 变量
+export PIP_REQUIRE_VIRTUALENV=true
+
+
 #以附加的方式写入历史纪录
 setopt INC_APPEND_HISTORY
 #如果连续输入的命令相同，历史纪录中只保留一个
@@ -247,6 +252,8 @@ alias chmod='sudo chmod'
 alias chown='sudo chown'
 alias chgrp='sudo chgrp'
 alias tmux='tmux -2'
+#pip
+alias pipin='pip install -i http://pypi.douban.com/simple/'
  
 #[Esc][h] man 当前命令时，显示简短说明 
 alias run-help >&/dev/null && unalias run-help
@@ -339,7 +346,10 @@ setopt extended_glob
      done
  }
 check-cmd-self-insert() { zle .self-insert && recolor-cmd }
- check-cmd-backward-delete-char() { zle .backward-delete-char && recolor-cmd }
+check-cmd-backward-delete-char() { zle .backward-delete-char && recolor-cmd }
   
- zle -N self-insert check-cmd-self-insert
- zle -N backward-delete-char check-cmd-backward-delete-char 
+zle -N self-insert check-cmd-self-insert
+zle -N backward-delete-char check-cmd-backward-delete-char 
+
+#切换到默认virtualenv
+source /home/nyankosama/pythonenv/py2.7/bin/activate
