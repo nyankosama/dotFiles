@@ -36,15 +36,18 @@ import sys
 sys.path.append('/home/nyankosama/fengjun/workspace/ww_project/loginTool')
 sys.path.append('/home/nyankosama/fengjun/workspace/ww_project/aliim')
 sys.path.append('/home/nyankosama/fengjun/workspace/ww_project/wwserver')
+sys.path.append('/home/nyankosama/workspace')
 import loginTool_ycm
 import aliim_ycm
 import ycm_wwserver
+import ycm_global
 
 flags = []
 #here we extend our own ycm flags define
-#flags.extend(loginTool_ycm.flags)
-#flags.extend(aliim_ycm.flags)
+flags.extend(loginTool_ycm.flags)
+flags.extend(aliim_ycm.flags)
 flags.extend(ycm_wwserver.flags)
+flags.extend(ycm_global.flags)
 
 
 # These are the compilation flags that will be used in case there's no

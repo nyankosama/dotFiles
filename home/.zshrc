@@ -111,7 +111,7 @@ limit coredumpsize 0
 bindkey -e
 #bindkey -v
 #设置 [DEL]键 为向后删除
-#bindkey "\e[3~" delete-char
+bindkey "\e[3~" delete-char
  
 #以下字符视为单词的一部分
 WORDCHARS='*?_-[]~=&;!#$%^(){}<>'
@@ -121,15 +121,15 @@ WORDCHARS='*?_-[]~=&;!#$%^(){}<>'
 setopt AUTO_LIST
 setopt AUTO_MENU
 #开启此选项，补全时会直接选中菜单项
-#setopt MENU_COMPLETE
+setopt MENU_COMPLETE
  
 autoload -U compinit
 compinit
  
 #自动补全缓存
-#zstyle ':completion::complete:*' use-cache on
-#zstyle ':completion::complete:*' cache-path .zcache
-#zstyle ':completion:*:cd:*' ignore-parents parent pwd
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path .zcache
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
  
 #自动补全选项
 zstyle ':completion:*' verbose yes
@@ -246,6 +246,7 @@ alias vim='sudo vim'
 alias chmod='sudo chmod'
 alias chown='sudo chown'
 alias chgrp='sudo chgrp'
+alias tmux='tmux -2'
  
 #[Esc][h] man 当前命令时，显示简短说明 
 alias run-help >&/dev/null && unalias run-help

@@ -83,6 +83,7 @@ Bundle 'grep.vim'
 Bundle 'ctrlp.vim'
 
 let g:ycm_global_ycm_extra_conf = '/home/nyankosama/.ycm_extra_conf.py'
+let g:ycm_key_invoke_completion = '<C-w>'
 
 
 set laststatus=2
@@ -108,7 +109,6 @@ map <silent><F2> :set nonu <CR>
 map <silent><C-y> :YcmDiags <CR>
 map <silent><C-i> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <silent><C-h> :nohl <CR>
-
 nnoremap <silent> <F5> :NERDTree<CR>
 "nnoremap <silent> <F4> :TlistToggle<CR>
 
