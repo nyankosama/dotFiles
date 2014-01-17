@@ -23,7 +23,6 @@ set guifont=monospace:h9
 "设置历史记录条数
 set history=1000
 
-
 set nobackup
 
 "设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号
