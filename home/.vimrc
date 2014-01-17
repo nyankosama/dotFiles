@@ -52,7 +52,7 @@ set ignorecase
 "set highligh search
 set hlsearch
 
-:hi Search term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
+:hi Search term=bold ctermbg=24 guibg=#13354A
 
 
 "设置Tab宽度
@@ -81,6 +81,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'taglist.vim'
 Bundle 'grep.vim'
+Bundle 'ctrlp.vim'
 
 let g:ycm_global_ycm_extra_conf = '/home/nyankosama/.ycm_extra_conf.py'
 

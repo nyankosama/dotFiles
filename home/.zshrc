@@ -241,6 +241,11 @@ alias pacman='sudo pacman-color'
 alias p='sudo pacman-color'
 alias y='yaourt'
 alias h='htop'
+alias du='du -h --max-depth=1'
+alias vim='sudo vim'
+alias chmod='sudo chmod'
+alias chown='sudo chown'
+alias chgrp='sudo chgrp'
  
 #[Esc][h] man 当前命令时，显示简短说明 
 alias run-help >&/dev/null && unalias run-help
