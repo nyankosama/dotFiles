@@ -111,7 +111,12 @@ map <silent><C-i> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <silent><C-h> :nohl <CR>
 nnoremap <silent> <F5> :NERDTree<CR>
 "nnoremap <silent> <F4> :TlistToggle<CR>
+"
 
+"括号自动补全
+imap ( ()<esc>i
+imap [ []<esc>i
+imap { {}<esc>i
 
 map <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
 imap <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
