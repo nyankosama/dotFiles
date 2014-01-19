@@ -114,9 +114,9 @@ nnoremap <silent> <F5> :NERDTree<CR>
 "
 
 "括号自动补全
-imap ( ()<esc>i
-imap [ []<esc>i
-imap { {}<esc>i
+imap (( ()<esc>i
+imap [[ []<esc>i
+imap {{ {}<esc>i
 
 map <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
 imap <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
