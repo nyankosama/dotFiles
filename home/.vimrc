@@ -1,5 +1,3 @@
-
-
 "==================================
 "    Vim基本配置
 "===================================
@@ -117,6 +115,8 @@ nnoremap <silent> <F5> :NERDTree<CR>
 imap (( ()<esc>i
 imap [[ []<esc>i
 imap {{ {}<esc>i
+imap ll <esc>li<right>
+imap aa <esc>$i<right>
 
 map <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
 imap <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
