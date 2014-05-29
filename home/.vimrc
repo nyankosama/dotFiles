@@ -1,5 +1,4 @@
 
-
 "==================================
 "    Vim基本配置
 "===================================
@@ -108,6 +107,7 @@ map <silent><F3> :set number <CR>
 map <silent><F2> :set nonu <CR>
 map <silent><C-y> :YcmDiags <CR>
 map <silent><C-i> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <silent><C-f> :%!astyle --style=java -N<CR>
 nnoremap <silent><C-h> :nohl <CR>
 nnoremap <silent> <F5> :NERDTree<CR>
 "nnoremap <silent> <F4> :TlistToggle<CR>
@@ -117,6 +117,9 @@ nnoremap <silent> <F5> :NERDTree<CR>
 imap (( ()<esc>i
 imap [[ []<esc>i
 imap {{ {}<esc>i
+imap hh <esc>i
+imap ll <esc>li<right>
+imap aa <esc>$i<right>
 
 map <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
 imap <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
@@ -152,6 +155,9 @@ vmap fp c<esc>:r c:/.vimxfer<cr>
 vmap fw :w! c:/.vimxfer<CR>
 endif
 
+"astyle format settings
+"autocmd BufNewFile,BufRead * set formatprg=astyle --style=java -N\
+\ 
 " auto generate head definition
 " usage: in normal pattern, press ,ha
 
@@ -239,7 +245,7 @@ function TitleDet()
             call UpdateTitle()
             return
         endif
-        let n = n + 1
+        let n = n + 
     endwhile
     call AddTitle()
 endfunction

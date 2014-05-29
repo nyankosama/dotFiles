@@ -44,6 +44,10 @@ export HISTFILE=~/.zhistory
 #PIP 变量
 export PIP_REQUIRE_VIRTUALENV=true
 
+#JDK
+export JAVA_HOME="/usr/lib/jvm/jdk1.7.0_51"
+export CLASSPATH=$JAVA_HOME/lib:.
+export PATH=$PATH:$JAVA_HOME/bin
 
 #以附加的方式写入历史纪录
 setopt INC_APPEND_HISTORY
