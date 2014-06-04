@@ -69,6 +69,9 @@ set encoding=utf-8
 "自动判断编码时 依次尝试一下编码
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
+set vb t_vb=                 " 关闭提示音
+set writebackup              " 设置无备份文件
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -107,19 +110,49 @@ map <silent><F3> :set number <CR>
 map <silent><F2> :set nonu <CR>
 map <silent><C-y> :YcmDiags <CR>
 map <silent><C-i> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-map <silent><C-f> :%!astyle --style=java -N<CR>
+map <silent><C-t> :%!astyle --style=java -N<CR>
 nnoremap <silent><C-h> :nohl <CR>
 nnoremap <silent> <F5> :NERDTree<CR>
 "nnoremap <silent> <F4> :TlistToggle<CR>
 "
 
 "括号自动补全
-imap (( ()<esc>i
-imap [[ []<esc>i
-imap {{ {}<esc>i
+"imap (( ()<esc>i
+"imap [[ []<esc>i
+"imap {{ {}<esc>i
 imap hh <esc>i
 imap ll <esc>li<right>
-imap aa <esc>$i<right>
+"imap aa <esc>$i<right>
+
+
+" Ctrl + L            将光标移到当前行的行尾
+imap <c-l> <ESC>A
+
+:inoremap ( ()<ESC>i
+
+:inoremap ) <c-r>=ClosePair(')')<CR>
+
+:inoremap { {}<ESC>i
+
+:inoremap } <c-r>=ClosePair('}')<CR>
+
+:inoremap [ []<ESC>i
+
+:inoremap ] <c-r>=ClosePair(']')<CR>
+
+:inoremap " ""<ESC>i
+
+:inoremap ' ''<ESC>i
+
+:inoremap ` ``<ESC>i
+
+function ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+       return "\<Right>"
+    else
+       return a:char
+    endif
+endf
 
 map <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
 imap <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>

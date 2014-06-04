@@ -38,11 +38,13 @@ import sys
 #sys.path.append('/home/nyankosama/fengjun/workspace/ww_project/wwserver')
 sys.path.append('/home/nyankosama/workspace')
 sys.path.append('/home/nyankosama/workspace/github/lightdis')
+sys.path.append('/home/nyankosama/workspace/practice/apue')
 #import loginTool_ycm
 #import aliim_ycm
 #import ycm_wwserver
 import ycm_global
 import lightdis_ycm
+import apue_ycm
 
 flags = []
 #here we extend our own ycm flags define
@@ -51,6 +53,7 @@ flags = []
 #flags.extend(ycm_wwserver.flags)
 flags.extend(ycm_global.flags)
 flags.extend(lightdis_ycm.flags)
+flags.extend(apue_ycm.flags)
 
 
 # These are the compilation flags that will be used in case there's no
